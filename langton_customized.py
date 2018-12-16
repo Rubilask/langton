@@ -9,6 +9,7 @@ continuer = False
 rule1_bool, rule2_bool=True, True
 rule1, rule2=[], []
 patern1, patern2=[[0],[0,0]]
+
 #Classe---------------------------------------
 class Fourmi():
     def __init__(self): #Constructeur
@@ -16,9 +17,7 @@ class Fourmi():
         self.posY = 50
         self.orientation = 90
         self.dureeVie = 0
-
-    #MÃ©thodes
-
+        
     def modifOrientation(self, patern):
         self.orientation+=patern[0][0]
         if self.orientation < -90:
@@ -50,10 +49,6 @@ class Fourmi():
             grille[self.posX][self.posY] = 1
             self.modifPosition(patern2)
             self.modifOrientation(patern2)
-            
-
-    def creationRegles(self):
-        regles = Tk()
 
 
 def afficherGrille1ereFois(grille):
