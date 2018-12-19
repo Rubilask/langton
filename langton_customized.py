@@ -38,6 +38,8 @@ class Fourmi():
         if self.orientation == -90 :
             self.posX -= patern[1][0]
             self.posY -= patern[1][1]
+        self.posX=self.posX%100
+        self.posY=self.posY%100
 
     def MaJfourmi(self):
         global grille, patern1, patern2
