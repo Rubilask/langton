@@ -19,10 +19,14 @@ Weird convergent behaviour :
 
 Binary counter :
 
-Stationnary 'complex' behaviour :
+Stationnary behaviour :
   -rule1 {Right}
   -rule2 {Right, Right}
 
 Typical divergent behaviour:
   -rule1 {Up,Left}
   -rule2 {Up}
+  
+Kind of langton's ant :
+  -rule1 {Up, Left}
+  -rule2 {Down, Right}
