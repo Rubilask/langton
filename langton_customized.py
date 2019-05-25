@@ -1,4 +1,5 @@
 from tkinter import *
+import random as rand
 
 #Variables----------------------------------
 cote = 510
@@ -107,6 +108,14 @@ def defining_rules(rule):
 def keyPress(event):
     global grille, fourmi, continuer, patern1, patern2, rule2, rule1, rule1_bool, rule2_bool
     
+    if event.keysym == "Space":
+        simulation()
+    if event.keysym == "BackSpace":
+        rule1_bool,rule2_bool = False, False
+        patern1=[[rand.randint(-1,2)*90], [rand.randint(-5,5),rand.randint(-5,5)]]
+        patern2=[[rand.randint(-1,2)*90], [rand.randint(-5,5),rand.randint(-5,5)]]
+        print("Here you go :\n",patern1,'\n', patern2)
+        
     if rule1_bool :
         if event.keysym == "Return":
             patern1=defining_rules(rule1)
@@ -137,6 +146,7 @@ def keyPress(event):
                 lancementSimulation()
             else:
                 continuer = False
+        
 
 def lancementSimulation():
     global fenetre, grille, continuer, fourmi
@@ -159,5 +169,6 @@ def simulation():
     dureeDeVie.pack(padx = 20, pady = 20)
     fenetre.bind("<Key>", keyPress)
     fenetre.mainloop()
-print("Type the move you want the ant to execute step by step, then press enter to confirm the set. 2 set of rules total.")
+    
+print("Type the move you want the ant to execute step by step, then press enter to confirm the set. 2 set of rules total. Press BackSpace to have random paterns.")
 simulation()
