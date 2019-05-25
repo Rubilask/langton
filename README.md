@@ -1,13 +1,11 @@
-# langton
-Langton's ant
+# Langton's ant
 
-This is the program for the langton's ant where you can choose your own rules. 
+# Description
+
+This is a code for the langton's ant where you can choose your own rules. 
 It's using tkinter and is not optimized nor commentated.
-For example, it might have some problem goind though the corner of the grid.
 
-I'd be glad receiving some comments about optimization or else.
-
-// Some paterns : (you can multiply each actions on each rule by the same number to get the same in bigger)
+# Some paterns :
 
 Langton's original patern :
   -rule1 {Right}
@@ -18,6 +16,8 @@ Weird convergent behaviour :
   -rule2 {Down, Left}
 
 Binary counter :
+ [[-90], [-4, -5]] 
+ [[0], [-5, 4]]
 
 Stationnary behaviour :
   -rule1 {Right}
