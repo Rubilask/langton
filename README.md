@@ -30,3 +30,7 @@ Typical divergent behaviour:
 Kind of langton's ant :
   -rule1 {Up, Left}
   -rule2 {Down, Right}
+
+Less obvious chaotic patern :
+  -rule1 {Down, Down, Down, Down, Left}
+  -rule2 {Down, Down, Down, Left}
